@@ -1,35 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>My Todo List</title>
 </head>
+
 <body>
-  <section class="container">
-    <div class="heading">
-      <img class="heading__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/laptop.svg">
-      <h1 class="heading__title">To-Do List</h1>
+    <div class="container">
+        <header class="text-center text-light my-4">
+            <h1 class="mb-4">Todo List</h1>
+            <form action="" class="search">
+                <i class="fa fa-search icon"></i>
+                <input type="text" class="form-control input-field m-auto" placeholder="search todos">
+            </form>
+        </header>
+
+        <ul class="list-group todos mx-auto text-light">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Do yoya</span>
+                <i class="fa fa-trash-o delete"></i>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>50 pushups</span>
+                <i class="fa fa-trash-o delete"></i>
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Read Book Novel</span>
+                <i class="fa fa-trash-o delete"></i>
+
+            </li>
+        </ul>
+
+        <form  class="add text-center my-4">
+            <label class="text-light">
+                Add new todo...
+            </label>
+            <input type="text" class="form-control m-auto" name="add"/>
+        </form>
     </div>
-    <form class="form">
-      <div>
-        <label class="form__label" for="todo">~ Today I need to ~</label>
-        <input class="form__input"
-             type="text" 
-             id="todo" 
-             name="to-do"
-             size="30"
-             required>
-        <button class="button"><span>Submit</span></button>
-      </div>
-    </form>
-    <div>
-      <ul class="toDoList">
-      </ul>
-    </div>
-  </section>
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
